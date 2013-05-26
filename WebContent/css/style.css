@@ -1,0 +1,31 @@
+body {
+	background: #ccc;
+}
+
+.limit {
+	margin: 0 auto;
+	width: 980px;
+}
+.content {
+	overflow: hidden;
+	background: #fff;
+	margin: 100px auto 0;
+	padding: 40px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.form-login {
+	width: 300px;
+}
+.form-cad {
+	width: 500px;
+}
+.formLogin .cad {
+	margin: 5px 0 0 0;
+	display: block;
+}
+.formLogin .btn {
+	display: block;
+	float: right;
+}
