@@ -3,7 +3,7 @@
 <!doctype html>
 <html lang="pt-br">
 <head>
-    <meta charset="ISO-8859-1">
+    <meta charset="utf-8">
     <title>Gerenciador de Tarefas</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-responsive.min.css.css">
@@ -13,8 +13,12 @@
 </head>
 <body>
     <div class="container">
+            <div class="alert alert-error">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Erro!</strong> Digite o usuário e senha corretamente.
+            </div>
             <div class="form-login content">
-                <form action="LoginServlet" method="post">
+                <form action="" method="post">
                     <fieldset>
                         <legend>Login</legend>
                         <input type="text" class="span4" name="email" id="emain" placeholder="E-mail">
