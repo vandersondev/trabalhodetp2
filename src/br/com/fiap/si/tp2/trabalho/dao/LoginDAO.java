@@ -8,14 +8,19 @@ import br.com.fiap.si.tp2.trabalho.factory.ConnectionFactory;
 public class LoginDAO {
 	
 	private PreparedStatement prepStmtSelectUser = null;
+	private Connection connection;
 	
 	private static final String SELECT_USER = "select * from usuario where mail = ? and senha = ?;";
 	
+	public LoginDAO() throws SQLException {
+		System.out.print("1");
+		this.connection = new ConnectionFactory().getConnection();
+		System.out.print("Conectado");
+	}
+	
 	public boolean validaLogin(String email, String senha) throws SQLException{
 		
-		Connection conn = ConnectionFactory.getConnection();
-		
-		prepStmtSelectUser = conn.prepareStatement(SELECT_USER);
+		prepStmtSelectUser = connection.prepareStatement(SELECT_USER);
 		prepStmtSelectUser.setString(1, email);
 		prepStmtSelectUser.setString(2, senha);
 		
@@ -30,7 +35,7 @@ public class LoginDAO {
 			user.setIsAdmin(rs.getBoolean("admin"));
 			return true;
 		}
-			
+		connection.close();
 		return false;
 	}
 }

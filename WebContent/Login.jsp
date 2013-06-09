@@ -1,16 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!doctype html>
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <title>Gerenciador de Tarefas</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-responsive.min.css.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-</head>
+<jsp:include page="header.jsp"/> 
 <body>
     <div class="container">
             <div class="alert alert-error">
@@ -18,7 +8,7 @@
                 <strong>Erro!</strong> Digite o usuário e senha corretamente.
             </div>
             <div class="form-login content">
-                <form action="" method="post">
+                <form action="LoginServlet" method="post">
                     <fieldset>
                         <legend>Login</legend>
                         <input type="text" class="span4" name="email" id="emain" placeholder="E-mail">

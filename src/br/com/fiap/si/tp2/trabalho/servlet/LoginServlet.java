@@ -39,7 +39,13 @@ public class LoginServlet extends HttpServlet {
 		
 		HttpSession session = request.getSession(true);
 		
-		LoginDAO loginDao = new LoginDAO();
+		LoginDAO loginDao = null;
+		try {
+			loginDao = new LoginDAO();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			System.out.println(e1.getMessage());
+		}
 		
 		String pagina = "";
 		
@@ -59,6 +65,7 @@ public class LoginServlet extends HttpServlet {
 			dispatcher.forward(request, response);
 			
 		} catch (SQLException e) {
+			System.out.print("2");
 			System.out.println(e.getMessage());
 		}
 				
