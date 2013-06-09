@@ -13,12 +13,12 @@ import javax.servlet.http.HttpSession;
 
 import br.com.fiap.si.tp2.trabalho.dao.LoginDAO;
 
-@WebServlet("/Login")
-public class Login extends HttpServlet {
+@WebServlet("/LoginServlet")
+public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     
-    public Login() {
+    public LoginServlet() {
         super();
     }
 	
