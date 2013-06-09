@@ -4,7 +4,7 @@ public class UsuarioBean {
 	
 	private int id;
 	private String nome;
-	private String email;
+	private String mail;
 	private String senha;
 	private boolean isAdmin;
 	
@@ -14,11 +14,11 @@ public class UsuarioBean {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getEmail() {
-		return email;
+	public String getMail() {
+		return mail;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setMail(String email) {
+		this.mail = email;
 	}
 	public String getSenha() {
 		return senha;
