@@ -11,7 +11,7 @@ public class ConnectionFactory {
 	private static final String BASE = "tarefas";
 		
 	public static Connection getConnection() throws SQLException {
-		
+		String tteste = "";
 		try{
 			Class.forName(DRIVER_MYSQL);
 			
