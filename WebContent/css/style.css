@@ -1,5 +1,5 @@
 body {
-	
+	background: #dae0ed;
 }
 
 .limit {
@@ -9,7 +9,7 @@ body {
 .content {
 	overflow: hidden;
 	background: #fff;
-	margin: 100px auto 0;
+	margin: 100px auto 20px;
 	padding: 40px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -28,4 +28,51 @@ body {
 .formLogin .btn {
 	display: block;
 	float: right;
+}
+
+.nav-service ul {
+	margin: 0;
+	padding: 0;
+	background-color: #FFF;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
+	-moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
+	list-style: none;
+}
+.nav-service ul li {line-height: 20px;}
+.nav-service ul li > a {
+	display: block;
+	margin: 0 0 -1px;
+	padding: 8px 14px;
+	border: 1px solid #E5E5E5;
+}
+.nav-service ul li > a:hover {
+	background-color: #F5F5F5;
+	text-decoration: none;
+}
+.nav-service ul li:first-child > a {
+	-webkit-border-radius: 6px 6px 0 0;
+	-moz-border-radius: 6px 6px 0 0;
+	border-radius: 6px 6px 0 0;
+}
+.nav-service ul li:last-child > a {
+	-webkit-border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	border-radius: 0 0 6px 6px;
+}
+
+/*
+	Tarefas
+*/
+
+.btn-new-task {
+	float: right;
+	margin: 0 0 20px 0;
+}
+
+.info-task {
+	
 }

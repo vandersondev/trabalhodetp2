@@ -12,7 +12,7 @@
     <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="limit">
+    <div class="container">
             <div class="form-login content">
                 <form action="" method="post">
                     <fieldset>

@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
@@ -24,12 +22,9 @@
                 </ul>
             </aside>
             <section class="span9">
-                <div class="alert alert-success">
-                  <button type="button" class="close" data-dismiss="alert">&times;</button>
-                  <strong>Bem vindo!</strong> Vanderson.
-                </div>
                 <div class="table-tasks">
                     <h3>Tarefas</h3>
+                    <a href="#" class="btn btn-primary btn-new-task"><i class="icon-pencil icon-white"></i> Nova tarefa</a>
                     <table class="table table-condensed table-hover table-bordered">
                         <thead>
                             <tr>
@@ -39,6 +34,7 @@
                                 <th>Atribuido</th>
                                 <th>Prioridade</th>
                                 <th>Status</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -49,6 +45,10 @@
                                 <td><a href="#">Vanderson</a></td>
                                 <td><a href="#"><span class="label label-important">Alta</span></a></td>
                                 <td><a href="#" class="text-warning">Fazendo</a></td>
+                                <td>
+                                    <a href="#" class="btn"><i class="icon-edit"></i> Editar</a>
+                                    <a href="#" class="btn btn-danger"><i class="icon-trash icon-white"></i> Excluir</a>
+                                </td>
                             </tr>
                             <tr class="success">
                                 <td><a href="#">02</a></td>
@@ -56,7 +56,11 @@
                                 <td><a href="#">Front end</a></td>
                                 <td><a href="#">Vanderson</a></td>
                                 <td><a href="#"><span class="label label-info">Baixa</span></a></td>
-                                <td><a href="#" class="text-info">Feito</a></td>
+                                <td><a href="#" class="text-success">Feito</a></td>
+                                <td>
+                                    <a href="#" class="btn"><i class="icon-edit"></i> Editar</a>
+                                    <a href="#" class="btn btn-danger"><i class="icon-trash icon-white"></i> Excluir</a>
+                                </td>
                             </tr>
                             <tr>
                                 <td><a href="#">03</a></td>
@@ -65,34 +69,14 @@
                                 <td><a href="#">Vanderson</a></td>
                                 <td><a href="#"><span class="label label-warning">Normal</span></a></td>
                                 <td><a href="#" class="text-error">A fazer</a></td>
+                                <td>
+                                    <a href="#" class="btn"><i class="icon-edit"></i> Editar</a>
+                                    <a href="#" class="btn btn-danger"><i class="icon-trash icon-white"></i> Excluir</a>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
-                <div class="table-message">
-                    <h3>Mensagens</h3>
-                    <table class="table table-condensed table-hover table-bordered">
-                        <thead>
-                            <tr>
-                                <th>De</th>
-                                <th>Assunto</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><a href="#">Igor</a></td>
-                                <td><a href="#">Entrega do cadastro.</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Marcelo</a></td>
-                                <td><a href="#">Entrega do front end.</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Aline</a></td>
-                                <td><a href="#">Trabalho de java</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <a href="#" class="btn btn-primary btn-new-task"><i class="icon-pencil icon-white"></i> Nova tarefa</a>
                 </div>
             </section>
         </div>
