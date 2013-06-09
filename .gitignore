@@ -12,7 +12,7 @@ local.properties
 .classpath
 .settings/
 .loadpath
-src/br/com/fiap/si/tp2/trabalho/factory/*
+/src/br/com/fiap/si/tp2/trabalho/factory/*
 # External tool builders
 .externalToolBuilders/
 

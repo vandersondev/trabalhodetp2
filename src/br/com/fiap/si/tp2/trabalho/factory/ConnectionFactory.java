@@ -6,7 +6,7 @@ public class ConnectionFactory {
 	
 	private static final String DRIVER_MYSQL = "com.mysql.jdbc.Driver";
 	private static final String USUARIO = "root";
-	private static final String SENHA = "mysql";
+	private static final String SENHA = "root";
 	private static final String JDBC_URL = "jdbc:mysql://localhost/";
 	private static final String BASE = "tarefas";
 		
