@@ -9,7 +9,7 @@ public class LoginDAO {
 	
 	private PreparedStatement prepStmtSelectUser = null;
 	
-	private static final String SELECT_USER = "select nome, email, senha from usuario where email = ? and senha = ?;";
+	private static final String SELECT_USER = "select * from usuario where email = ? and senha = ?;";
 	
 	public boolean validaLogin(String email, String senha) throws SQLException{
 		
@@ -23,9 +23,11 @@ public class LoginDAO {
 		
 		while(rs.next()){
 			UsuarioBean user = new UsuarioBean();
+			user.setId(rs.getInt("id"));
 			user.setNome(rs.getString("nome"));
 			user.setEmail(rs.getString("email"));
 			user.setSenha(rs.getString("senha"));
+			user.setIsAdmin(rs.getBoolean("admin"));
 			return true;
 		}
 			

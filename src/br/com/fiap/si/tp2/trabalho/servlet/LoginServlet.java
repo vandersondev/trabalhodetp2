@@ -46,15 +46,14 @@ public class LoginServlet extends HttpServlet {
 		try {
 			if(loginDao.validaLogin(emailLogin, senhaLogin)) {
 				login = "logado";
-				session.setAttribute("sessionLogin", login);
 				pagina = "Index.jsp";
 				
 			}else{
 				login = "naoLogado";
-				session.setAttribute("sessionLogin", login);
 				pagina = "Login.jsp";
 				
 			}
+			session.setAttribute("sessionLogin", login);
 			
 			RequestDispatcher dispatcher = request.getRequestDispatcher(pagina);
 			dispatcher.forward(request, response);

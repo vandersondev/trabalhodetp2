@@ -2,10 +2,11 @@ package br.com.fiap.si.tp2.trabalho.bean;
 
 public class UsuarioBean {
 	
+	private int id;
 	private String nome;
 	private String email;
 	private String senha;
-	private String isAdmin;
+	private boolean isAdmin;
 	
 	public String getNome() {
 		return nome;
@@ -25,11 +26,17 @@ public class UsuarioBean {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	public String getIsAdmin() {
+	public boolean getIsAdmin() {
 		return isAdmin;
 	}
-	public void setIsAdmin(String isAdmin) {
-		this.senha = isAdmin;
+	public void setIsAdmin(Boolean isAdmin) {
+		this.isAdmin = isAdmin;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 }

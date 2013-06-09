@@ -8,7 +8,7 @@ public class ConnectionFactory {
 	private static final String USUARIO = "root";
 	private static final String SENHA = "mysql";
 	private static final String JDBC_URL = "jdbc:mysql://localhost/";
-	private static final String BASE = "db_gdt_2013";
+	private static final String BASE = "tarefas";
 		
 	public static Connection getConnection() throws SQLException {
 		
