@@ -14,7 +14,7 @@
 <body>
     <div class="container">
             <div class="form-login content">
-                <form action="" method="post">
+                <form action="LoginServlet" method="post">
                     <fieldset>
                         <legend>Login</legend>
                         <input type="text" class="span4" name="email" id="emain" placeholder="E-mail">
