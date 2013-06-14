@@ -11,12 +11,27 @@
         <div class="row">
             <c:import url="sidebar.jsp"/>
             <section class="span9">
-                <div class="alert alert-success">
-                  <button type="button" class="close" data-dismiss="alert">&times;</button>
-                  <strong>Bem vindo!</strong> ${sessionScope.usuario.getNome()}.
-                </div>
+            <c:if test="${requestScope.successDelete == 1}">
+	            <div class="alert alert-success">
+	                <button type="button" class="close" data-dismiss="alert">&times;</button>
+	                <strong>Viva!</strong> Tarefa excluida.
+	            </div>
+            </c:if>
+            <c:if test="${requestScope.successCreated == 1}">
+	            <div class="alert alert-success">
+	                <button type="button" class="close" data-dismiss="alert">&times;</button>
+	                <strong>Viva!</strong> Tarefa Criada.
+	            </div>
+            </c:if>
+            <c:if test="${requestScope.successEdited == 1}">
+	            <div class="alert alert-success">
+	                <button type="button" class="close" data-dismiss="alert">&times;</button>
+	                <strong>Viva!</strong> Tarefa Editada.
+	            </div>
+            </c:if>
                 <div class="table-tasks">
                     <h3>Tarefas</h3>
+                    <a href="NovaTarefaServlet" class="btn btn-primary btn-new-task"><i class="icon-pencil icon-white"></i> Nova tarefa</a>
                     <table class="table table-condensed table-hover table-bordered">
                         <thead>
                             <tr>
@@ -26,12 +41,11 @@
                                 <th>Atribuido</th>
                                 <th>Prioridade</th>
                                 <th>Status</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                        
                         <c:forEach items="${tarefas}" var="t">
-                            
                             <c:choose>
                            	<c:when test="${t.prioridade == 1 }">
                            	<tr class="error">
@@ -72,29 +86,15 @@
                                 	</c:when>
                                 </c:choose>
                                 </td>
+                                <td>
+                                    <a href="EditarTarefaServlet?id=${t.id }" class="btn"><i class="icon-edit"></i> Editar</a>
+                    				<a href="ExcluirTarefaServlet?id=${t.id }" class="btn btn-danger"><i class="icon-trash icon-white"></i> Excluir</a>
+                                </td>
                             </tr>
-                        </c:forEach>
+                          </c:forEach>
                         </tbody>
                     </table>
-                </div>
-                <div class="table-message">
-                    <h3>Mensagens</h3>
-                    <table class="table table-condensed table-hover table-bordered">
-                        <thead>
-                            <tr>
-                                <th>De</th>
-                                <th>Assunto</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        <c:forEach items="${mensagens}" var="m">
-                            <tr>
-                                <td><a href="MensagemServlet?id_mensagem=${m.id }">${m.de.nome}</a></td>
-                                <td><a href="MensagemServlet?id_mensagem=${m.id }">${m.assunto }</a></td>
-                            </tr>
-                        </c:forEach>
-                        </tbody>
-                    </table>
+                    <a href="NovaTarefaServlet" class="btn btn-primary btn-new-task"><i class="icon-pencil icon-white"></i> Nova tarefa</a>
                 </div>
             </section>
         </div>

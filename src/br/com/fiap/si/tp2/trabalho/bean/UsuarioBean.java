@@ -6,7 +6,7 @@ public class UsuarioBean {
 	private String nome;
 	private String mail;
 	private String senha;
-	private boolean isAdmin;
+	private int isAdmin;
 	
 	public String getNome() {
 		return nome;
@@ -26,10 +26,10 @@ public class UsuarioBean {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	public boolean getIsAdmin() {
+	public int getIsAdmin() {
 		return isAdmin;
 	}
-	public void setIsAdmin(Boolean isAdmin) {
+	public void setIsAdmin(int isAdmin) {
 		this.isAdmin = isAdmin;
 	}
 	public int getId() {

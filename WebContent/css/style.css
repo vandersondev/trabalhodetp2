@@ -64,6 +64,8 @@ body {
 	border-radius: 0 0 6px 6px;
 }
 
+/*  */
+.btn-sair {margin:30px;}
 /*
 	Tarefas
 */
@@ -76,3 +78,4 @@ body {
 .info-task {
 	
 }
+
